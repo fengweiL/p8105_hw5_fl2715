@@ -101,6 +101,7 @@ power_data |>
       y = "Power (Probability of Rejecting Null)"
     )
 ```
+
 Describe the association between **effect size and power**:
 From the above plot, we can see that the power of the test increases as the true mean increases from zero. It indicates a positive association between effect size and power.
 
