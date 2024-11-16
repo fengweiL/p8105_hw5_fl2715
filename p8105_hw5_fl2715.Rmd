@@ -71,7 +71,7 @@ Then, we generate 5000 datasets for the model.
 ```{r}
 sim_results_df = 
   expand_grid(
-    mu =1:6,
+    mu =0:6,
     iter = 1:5000
   ) |> 
   mutate(
@@ -131,7 +131,7 @@ mu_estimates |>
                        labels = c("All samples", "Rejected samples"))
 ```
 
-For the samples where the null was rejected, the average estimate of ($\hat{\mu}$) tends to be slightly higher than the true value when true mean is equal to 1, 2, and 3. The average estimate of ($\hat{\mu}$) is approximately equal to the true mean when true mean is equal to 4, 5, and 6. This is due to selection bias: tests are more likely to reject when sample means are further from zero, creating an upward bias in the average estimate when conditioning on rejection.
+For the samples where the null was rejected, the average estimate of ($\hat{\mu}$) tends to be slightly higher than the true value when true mean is equal to 1, 2, and 3. The average estimate of ($\hat{\mu}$) is equal to the true mean when true mean is equal to 0, 4, 5, and 6. This is due to selection bias: tests are more likely to reject when sample means are further from zero, creating an upward bias in the average estimate when conditioning on rejection.
 
 ## Problem 3
 
